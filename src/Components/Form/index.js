@@ -7,29 +7,28 @@ const Form = () => {
       <form>
         <div>
           <p>CARDHOLRDER NAME</p>
-          <input type={'text'}/>
+          <input placeholder="e.g. Jane Appleseed"/>
         </div>
         <div>
           <p>CARD NUMBER</p>
-          <input type={'number'}/>
+          <input placeholder="e.g. 1234 5678 9123 0000"/>
         </div>
 
         <section>
           <div>
             <p>EXP.DATE(MM/YY)</p>
-            <input type='text'/>
-            <input type='text'/>
+            <input placeholder="MM"/>
+            <input placeholder="YY"/>
           </div>
 
-          <div>
+          <div className='CVC'>
             <p>CVC</p>
-            <input type={'number'}/>
+            <input placeholder="e.g. 123"/>
           </div>
         </section>
 
-        <div>
-          <button>Confim</button>
-        </div>
+        <button>Confim</button>
+
       </form>
     </FormContainer>
   )
