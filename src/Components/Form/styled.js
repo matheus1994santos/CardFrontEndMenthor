@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.section`
    display: flex;
    justify-content: center;
    align-items: center;
@@ -10,47 +10,12 @@ export const FormContainer = styled.form`
    & form{
     display: flex;
     flex-direction: column;
+    max-width: 388px;
+    gap: 20px;
 
         & section{
             display: flex;
             gap: 15px;
-            
-
-            & div > input{
-            width: 60px;
-            }
-        }
-
-        & div{
-            & p{
-                font-size: 0.8em;
-            }
-
-            & input{
-                border: 1px solid #ccc;
-                outline: none;
-                padding: 10px 16px;
-                border-radius: 10px;
-                margin-right: 4px;
-                width: 350px;
-                font-size: 0.98em;
-            }
-        }
-
-        & div.CVC{
-            & p{
-                font-size: 0.8em;
-            }
-
-            & input{
-                border: 1px solid #ccc;
-                outline: none;
-                padding: 10px 16px;
-                border-radius: 10px;
-                margin: 0px;
-                width: 130px;
-                font-size: 0.98em;
-            }
         }
 
         & button{

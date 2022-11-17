@@ -34,7 +34,7 @@ export const Frontcard = styled.div`
         flex-direction: column;
 
         & span{
-            font-size: 2.35em;
+            font-size: 2.05em;
             padding: 0;
             margin: 4px 0;
         }
@@ -64,4 +64,12 @@ export const BackCard = styled.div`
     position: absolute;
     top: 430px;
     left: 260px;
+
+    & p{
+        position: relative;
+        top: 96px;
+        left: 350px;
+        color: white;
+        font-size: 0.86em;
+    }
 `;
