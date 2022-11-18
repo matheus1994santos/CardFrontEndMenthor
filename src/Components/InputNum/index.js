@@ -3,9 +3,7 @@ import { PatternFormat } from 'react-number-format'
 import { Inputnum } from './style'
 
 const InputNum = ({label, text, callback, placeholder}) => {
-  const validNumber = text.replace(/ /g, '').length < 16;
-  const isMoreZero = text.replace(/ /g, '').length > 0;
-  console.log(`text..${text.replace(/ /g, '')} - length: ${text.length}`)
+  const validNumber = text.replace(/ /g, '').length < 16 && text.replace(/ /g, '').length > 4;
 
   return (
     <Inputnum validacao={validNumber}>
@@ -16,7 +14,7 @@ const InputNum = ({label, text, callback, placeholder}) => {
             placeholder={placeholder} 
             value={text} 
             onChange={ ({target})=> callback(target.value) } 
-        />  { validNumber && isMoreZero && <span>Wrong format, numbers only</span>} 
+        /> { validNumber && <span>Enter the sixteen numbers</span>}
     </Inputnum>
   )
 }

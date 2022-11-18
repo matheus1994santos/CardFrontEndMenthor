@@ -14,6 +14,10 @@ export const Inputnum = styled.div`
         width: 350px;
         font-size: 0.98em;
         outline-color: ${(props) => !props.validacao ? 'hsl(278, 80%, 40%)' : 'red'};
+
+        @media (max-width: 410px){
+            width: 310px;
+        }
     }
 
     & span{
@@ -21,6 +25,6 @@ export const Inputnum = styled.div`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        color: red;
+        color: hsl(0, 100%, 66%);
     }
 `;

@@ -1,18 +1,23 @@
 import React from 'react'
-import { Inputname } from './style';
+
+import containsNumbers from '../../utils/containsNumbers';
+import { StyledInput } from './style';
 
 const InputPrin = ({label, text, callback, placeholder}) => {
-  const isString = text.replace(/ /g, '').length < 8 && typeof text === 'string';
+  const textLength = text.length;
+  const isValidString = !containsNumbers(text) && textLength > 2 || textLength == 0;
+
   
   return (
-    <Inputname isString={isString}>
+    <StyledInput isValidString={isValidString}>
         <p>{label}</p>       
         <input 
-            placeholder={placeholder} 
+            placeholder={placeholder}
             value={text} 
-            onChange={ ({target})=> callback(target.value) } 
+            onChange={ ({target})=> callback(target.value) }
+            required={true}
         />  
-    </Inputname>
+    </StyledInput>
   )
 }
 

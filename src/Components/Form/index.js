@@ -1,5 +1,6 @@
 import React from 'react'
-import { FormContainer } from './styled'
+import { FormContainer, StyleCongratulations } from './styled'
+import IconComplete from '../../images/icon-complete.svg'
 import InputPrin from '../InputPrincipal'
 import InputDate from '../InputDate';
 import InputSenha from '../InputSenha';
@@ -51,11 +52,15 @@ const Form = (props) => {
         <button onClick={handleClick}>Confim</button>
 
       </form> : 
+      
+      <StyleCongratulations>
+        <img src={IconComplete}/>
 
-      <form>
-        <p>Thank you</p>
-        <button onClick={handleClick}>New Form</button>
-      </form>    
+        <p>Thank you!</p>
+        <span>We're added your card details</span>
+        <br/>
+        <button onClick={handleClick}>Continue</button>
+      </StyleCongratulations>    
       }
 
 

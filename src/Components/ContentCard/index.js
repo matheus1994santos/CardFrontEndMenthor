@@ -17,7 +17,7 @@ const ContentCard = (props) => {
               { !props.cliente ? "JANE APPLESEED" : props.cliente}
             </p>
             <p>
-              { !props.mes ? "00" : props.mes} / { !props.ano ? "00" : props.ano}
+              { !props.mes ? "00" : props.mes < 10 ? '0' + props.mes : props.mes} / { !props.ano ? "00" : props.ano}
             </p>
           </nav>
         </div>
